@@ -5,14 +5,22 @@
 //  Created by jesse on 2018/1/19.
 //  Copyright © 2018年 yun. All rights reserved.
 //
-#define REYUN_TRACKING_VERSION @"1.5.0"
+#define REYUN_TRACKING_VERSION @"1.5.1"
 #import <Foundation/Foundation.h>
 NS_ASSUME_NONNULL_BEGIN
+
+@protocol DeferredDeeplinkCalllback <NSObject>
+@optional
+- (void)onDeferredDeeplinkCalllback:(NSDictionary *)params;
+@end
+
 @interface Tracking : NSObject
 //开启打印日志   正式上线包请关掉
 +(void) setPrintLog :(BOOL)print;
 // 开启数据统计
 + (void)initWithAppKey:(NSString *)appKey withChannelId:(NSString *)channelId;
+//延迟深度链接回调代理设置
++ (void)setDeferredDeeplinkCalllbackDelegate:(id<DeferredDeeplinkCalllback>) delegate ;
 //注册成功后调用
 + (void)setRegisterWithAccountID:(NSString *)account;
 //登陆成功后调用
