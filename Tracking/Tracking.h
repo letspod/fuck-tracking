@@ -5,7 +5,7 @@
 //  Created by jesse on 2018/1/19.
 //  Copyright © 2018年 yun. All rights reserved.
 //
-#define REYUN_TRACKING_VERSION @"1.6.2"
+#define REYUN_TRACKING_VERSION @"1.7.1"
 #import <Foundation/Foundation.h>
 NS_ASSUME_NONNULL_BEGIN
 
@@ -29,16 +29,14 @@ NS_ASSUME_NONNULL_BEGIN
 +(void)setDD:(NSString *)ryTID hbType:(NSString*)hbType hbAmount:(float)hbAmount;
 // 支付完成，付费分析,记录玩家充值的金额（人民币单位是元）
 +(void)setRyzf:(NSString *)ryTID ryzfType:(NSString*)ryzfType hbType:(NSString*)hbType hbAmount:(float)hbAmount;
-//广告展示时调用
-+(void)onAdShow:(NSString *)adPlatform adId:(NSString *)adId;
+//广告展示时调用 playSuccess 参数调用广告填充成功时传1  不成功时传2
++(void)onAdShow:(NSString *)adPlatform adId:(NSString *)adId isSuccess:(int)playSuccess;
 //广告点击时调用
 +(void)onAdClick:(NSString *)adPlatform adId:(NSString *)adId;
-//页面展示时调用 pageID代表页面唯一标识，如果使用pageName作为pageID参数值，请确保pageName的唯一性
-+(void)trackViewAppear:(NSString *)pageID;
-//页面消失时调用，与trackViewAppear:函数成对调用，追踪页面展示时长
-+(void)trackViewDisAppear:(NSString *)pageID;
-//是否开启APP使用时长监测
-+(void)setTrackAppDuration:(BOOL)track;
+//页面时长监测
++(void)trackViewName:(NSString *)pageID duration:(long)duration;
+//APP使用时长监测
++(void)setTrackAppDuration:(long)duration;
 //自定义事件
 +(void)setEvent:(NSString *)eventName;
 //获取设备信息
