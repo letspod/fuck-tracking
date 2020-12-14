@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ReYunTrackingIO"
-  s.version      = "1.7.1.1"
+  s.version      = "1.7.8.1"
   s.summary      = "Official ReYun Tracking SDK for iOS"
   s.homepage         = "https://www.reyun.com"
 
@@ -23,8 +23,8 @@ Pod::Spec.new do |s|
 
   s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/TrackingSDK/Tracking/**"' }
   
-  s.frameworks = 'SystemConfiguration','AdSupport','CoreTelephony','Security','CoreMotion',"iAd",'AVFoundation'
+  s.frameworks = 'SystemConfiguration','AdSupport','CoreTelephony','Security','CoreMotion',"iAd",'AVFoundation','WebKit','CFNetwork'
 
-  s.libraries  = 'sqlite3','ReYunTracking',"z"
+  s.libraries  = 'sqlite3',"z","resolv"
 
 end
