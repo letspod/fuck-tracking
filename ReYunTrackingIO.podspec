@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ReYunTrackingIO"
-  s.version      = "1.8.4.1"
+  s.version      = "1.8.5.1"
   s.summary      = "Official ReYun Tracking SDK for iOS"
   s.homepage     = "https://www.reyun.com"
   s.license      = { :type => "MIT", :file => "LICENSE" }

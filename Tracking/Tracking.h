@@ -5,7 +5,7 @@
 //  Created by jesse on 2018/1/19.
 //  Copyright © 2018年 yun. All rights reserved.
 //
-#define REYUN_TRACKING_VERSION @"1.8.4"
+#define REYUN_TRACKING_VERSION @"1.8.5"
 #import <Foundation/Foundation.h>
 NS_ASSUME_NONNULL_BEGIN
 
