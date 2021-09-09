@@ -8,8 +8,8 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
   s.source        = { :git => "https://github.com/reyun-ios/tracking.git", :tag => s.version }
   s.source_files  = 'Tracking/*.{h,a}'
-  s.static_framework = true
-  s.ios.vendored_library = "Tracking/*.a"
+  s.vendored_library = "Tracking/*.a"
+  s.preserve_paths = "Tracking/libReYunTracking.a"
   s.frameworks = 'SystemConfiguration','AdSupport','CoreTelephony','Security','CoreMotion',"iAd",'AVFoundation','WebKit','CFNetwork'
   s.libraries  = 'sqlite3',"z","resolv"
 end
