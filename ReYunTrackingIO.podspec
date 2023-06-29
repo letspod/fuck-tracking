@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ReYunTrackingIO"
-  s.version      = "1.9.4"
+  s.version      = "1.9.11"
   s.summary      = "Official ReYun Tracking SDK for iOS"
   s.homepage     = "https://www.reyun.com"
   s.license      = { :type => "MIT", :file => "LICENSE" }
@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
   s.public_header_files = "trackingIO_iOS_1.9.4/*.h"
   s.vendored_libraries = 'trackingIO_iOS_1.9.4/libReYunTracking.a'
 
-  s.frameworks = 'SystemConfiguration','AdSupport','CoreTelephony','Security','CoreMotion',"iAd",'AVFoundation','WebKit','CFNetwork'
+  s.frameworks = 'SystemConfiguration','CoreTelephony','Security','CoreMotion',"iAd",'AVFoundation','WebKit','CFNetwork'
+  s.weak_frameworks = 'AdSupport'
   s.libraries  = 'sqlite3',"z","resolv","resolv.9","c++"
 end
