@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author       = { "feiyang" => "3196817369@qq.com" }
   s.platform     = :ios, "9.0"
   s.requires_arc = true
-  s.source        = {"http": "https://sdk.s3.cn-north-1.amazonaws.com.cn/new_trackingIO/trackingIO_iOS_1.9.11.zip"}
+  s.source       = { :git => 'https://github.com/letspod/fuck-tracking.git', :tag => s.version.to_s }
   
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'ENABLE_BITCODE' => 'NO' }
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' ,'ENABLE_BITCODE' => 'NO' }
